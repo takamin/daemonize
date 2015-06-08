@@ -5,6 +5,6 @@ set(CMAKE_EXE_LINKER_FLAGS -pthread)
 set(LIBSRC daemonize.c )
 
 include_directories( . mydaemon)
-add_library(daemonize SHARED ${LIBSRC})
+add_library(daemonize ${LIBSRC})
 add_executable(mydaemon mydaemon/mydaemon.c mydaemon/daemon_main.c)
 target_link_libraries(mydaemon daemonize)
